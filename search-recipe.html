@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Пошук рецепту</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Пошук рецепту</h1>
+    <nav>
+      <a href="index.html" class="nav-button">На головну</a>
+    </nav>
+  </header>
+  <main>
+    <section class="search-recipe">
+      <h2>Знайти рецепт</h2>
+      <div class="search-wrapper">
+        <input type="text" id="search-input" placeholder="Введіть назву рецепту" class="input-field">
+        <img src="lupa.png" alt="Пошук" class="search-icon">
+      </div>
+      <select id="recipe-type-filter" class="input-field">
+        <option value="">Виберіть тип рецепту</option>
+        <option value="Сніданок">Сніданок</option>
+        <option value="Обід">Обід</option>
+        <option value="Вечеря">Вечеря</option>
+        <option value="Десерт">Десерт</option>
+      </select>
+    </section>
+    <section class="recipe-list">
+      <h2>Результати пошуку</h2>
+      <ul id="recipes-container"></ul>
+    </section>
+  </main>
+
+  <!-- Модальное окно для отображения рецепта -->
+  <div id="recipe-modal" class="recipe-modal">
+    <div class="recipe-modal-content">
+      <span id="close-modal" class="close-modal">&times;</span>
+      <h2 id="modal-recipe-name"></h2>
+      <img id="modal-recipe-image" src="" alt="Recipe Image">
+      <p id="modal-recipe-description"></p>
+      <p id="modal-recipe-type"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Додати новий рецепт</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Додати новий рецепт</h1>
+    <nav>
+      <!-- Кнопка для перехода на головну сторінку -->
+      <a href="index.html" class="nav-button">На головну</a>
+    </nav>
+  </header>
+  <main>
+    <section class="add-recipe">
+      <h2>Заповніть форму для додавання рецепту</h2>
+      <form id="recipe-form">
+        <input type="text" id="recipe-name" placeholder="Назва рецепту" required>
+        <textarea id="recipe-description" placeholder="Опис рецепту" rows="5" required></textarea>
+        <select id="recipe-type" required>
+          <option value="" disabled selected>Виберіть вид блюда</option>
+          <option value="Сніданок">Сніданок</option>
+          <option value="Обід">Обід</option>
+          <option value="Вечеря">Вечеря</option>
+          <option value="Десерт">Десерт</option>
+        </select>
+        <div class="file-input-wrapper">
+          <input type="file" id="recipe-image" accept="image/*">
+          <img src="file.png" alt="Вибір файлу" class="file-icon">
+        </div>
+        <!-- Кнопка добавлення рецепту -->
+        <button type="submit" class="nav-button">Додати рецепт</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Вспливаюче повідомлення -->
+  <div id="success-message" class="success-message">
+    Рецепт успішно додано!
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
